@@ -1,6 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.widgetbot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
+</head>
+<body>
+<button class="button" onclick="window.open('about:blank');">about:blank</button>
 <widgetbot
     server="1215114526182350949"
     channel="1215114526643589162"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;"
 ></widgetbot>
 <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+</body>
+</html>
